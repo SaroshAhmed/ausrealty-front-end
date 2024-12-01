@@ -1,21 +1,123 @@
+@import url(https://db.onlinewebfonts.com/c/5fd740bac1abfb826fb7e35ae963efc9?family=ABChanel+Corpo+Regular);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "ABChanel Corpo Regular";
+  src: url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.eot");
+  src: url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/5fd740bac1abfb826fb7e35ae963efc9.svg#ABChanel Corpo Regular")format("svg");
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
+  
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "ABChanel Corpo Regular";
+  text-transform: none;
+  font-weight: normal;
+}
+body, h1, h2, h3, p {
+  text-transform: none; /* Ensures no text-transform rule forces uppercase globally */
+}
+h2 {
+  text-transform: none;
+  font-family: Arial, sans-serif;
+}
+p {
+  text-transform: none;
+  font-family: Arial, sans-serif;
+}
+
+input::placeholder {
+  font-family: Arial, sans-serif;
+}
+input{
+  font-family: Arial, sans-serif;
+}
+/* CUSTOM CSS */
+
+.main-cta{
+  color: #FFF;
+  font-family: "ABChanel Corpo Regular";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 100;
+  /* line-height: 170%; */
+  background-color: black;
+  padding: 15px 15px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.9s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.7s ease-out;
+}
+
+
+.property-description{
+  font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 200%; /* 24px */
+letter-spacing: 0.6px;
+}
+
+@media (max-width: 600px) {
+  .video {
+      height: auto;
+      width: 100%;
+  }
 }
